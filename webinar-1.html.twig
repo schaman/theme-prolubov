@@ -18,7 +18,7 @@
       </div>
       <div class="col-xs-6 col-sm-5 col-md-4">
         <div class="well">
-          <form>
+          <form action="{{ product | product_order_url }}" method="POST">
             <div class="form-group">
               <input type="text" name="name" class="form-control input-lg" placeholder="Имя" required="required"/>
             </div>
@@ -40,21 +40,23 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3">
-        <img src="https://www.dropbox.com/s/x35ea1jlgwnwtbb/smiling.jpg?dl=1" class="img-responsive"/>
+        <img src="{{ speaker.photo | media_url }}" class="img-responsive"/>
       </div>
       <div class="col-xs-6 col-sm-7 col-md-6">
         <h2>Вебинар ведёт</h2>
-        <p class="lead">Николай Воробьёв</p>
-        <ul>
-          <li>Международный тренер и коуч с 12-летним опытом</li>
-          <li>Владелец 4 компаний</li>
-          <li>Автор 4 книг и 15 тренингов</li>
-          <li>Ведущий и тренер в 4 телевизионных и радио шоу об отношениях и личной эффективности</li>
-        </ul>
+        <p class="lead">{{ speaker.name }}</p>
+        {{ speaker.text | markdown }}
       </div>
     </div>
   </div>
 </section>
+
+<section>
+  <p align="center">
+    <img src="http://icoach.io/shottemplates/transformation/img/partners.png" class="img-responsive"/>
+  </p>
+</section>
+
 {% endblock %}
 {% block stylesheets %}
 <style type="text/css">
