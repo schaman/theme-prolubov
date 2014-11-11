@@ -17,6 +17,7 @@
       <script src="{{ 'js/vendor/html5shiv.js' | asset_url }}"></script>
       <script src="{{ 'js/vendor/respond.min.js' | asset_url }}"></script>
     <![endif]-->
+    <link href="{{ 'prolubov.css' | asset_url }}" rel="stylesheet">
     {% block stylesheets %}{% endblock %}
   </head>
   <body>
@@ -26,6 +27,6 @@
     <script src="{{ 'js/vendor/jquery.min.js' | asset_url }}"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ 'js/flat-ui.min.js' | asset_url }}"></script>
-
+    {% block javascripts %}{% endblock %}
   </body>
 </html>
