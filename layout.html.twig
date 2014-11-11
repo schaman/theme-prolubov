@@ -9,7 +9,7 @@
           <li><a href="{{ path('yo_render_offer', { 'slug': 'prolubov.com' }) }}">Вебинар</a></li>
           <li><a href="{{ path('front_page_show', { 'slug': 'show' }) }}">Шоу</a>
             </li>
-          <li class="active"><a href="{{ path('front_blog') }}">Блог</a></li>
+          <li class="active"><a href="{{ path('front_blog', { 'host': 'prolubov.com' }) }}">Блог</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav><!-- /navbar -->
@@ -29,7 +29,7 @@
             </li>
             <li><a href="{{ path('front_page_show', { 'slug': 'show' }) }}">Шоу</a>
             </li>
-            <li><a href="{{ path('front_blog') }}">Блог</a>
+            <li><a href="{{ path('front_blog', { 'host': 'prolubov.com' }) }}">Блог</a>
             </li>
           </ul>
         </div>
